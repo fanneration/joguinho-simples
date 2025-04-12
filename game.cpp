@@ -16,7 +16,13 @@ void randomposition(){
 void displayfunc(){
     display[goodposition]='o';
     while (true){
-        cout << display[position-1] << display[position] << display[position+1] << "\npoints: " << points << "    round: " << points+1;
+        if (position>=1&&position<=8){
+            cout << display[position-1] << display[position] << display[position+1] << "\npoints: " << points << "    round: " << points+1;
+        }else if (position==0){
+            cout << display[9] << display[position] << display[position+1] << "\npoints: " << points << "   round: " << points+1;
+        }else{
+            cout << display[position-1] << display[position] << display[0] << "\npoints: " << points << "   round: " << points+1;
+        }
         Sleep(delay);
         system("CLS");
         if (position==9){
