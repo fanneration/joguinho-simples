@@ -1,7 +1,7 @@
 #include<iostream>
 #include<cmath>
 #include<ctime>
-#include<stdlib.h>
+#include<cstdlib>
 #include<windows.h>
 #include<conio.h>
 using namespace std;
@@ -19,12 +19,12 @@ void displayfunc(){
         if (position>=1&&position<=8){
             cout << display[position-1] << display[position] << display[position+1] << "\npoints: " << points << "    round: " << points+1;
         }else if (position==0){
-            cout << display[9] << display[position] << display[position+1] << "\npoints: " << points << "   round: " << points+1;
+            cout << display[9] << display[position] << display[position+1] << "\npoints: " << points << "    round: " << points+1;
         }else{
-            cout << display[position-1] << display[position] << display[0] << "\npoints: " << points << "   round: " << points+1;
+            cout << display[position-1] << display[position] << display[0] << "\npoints: " << points << "    round: " << points+1;
         }
         Sleep(delay);
-        system("CLS");
+        cout << "\033[2J\033[1;1H";
         if (position==9){
             position=0;
             continue;
