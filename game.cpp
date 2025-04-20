@@ -5,7 +5,7 @@
 #include<windows.h>
 #include<conio.h>
 using namespace std;
-char display[10]={'x','x','x','x','x','x','x','x','x','x'},googoogaga;
+char display[10]={'x','x','x','x','x','x','x','x','x','x'},pender;
 int delay,goodposition,position=0,points=0;
 void randomdelay(){
     delay=100*abs(sin(rand()))+100;
@@ -50,6 +50,6 @@ int main(){
         }
     }
     cout << "you lost!";
-    cin >> googoogaga;
+    cin >> pender;
     return 0;
     }
